@@ -1,5 +1,7 @@
 package com.example.stefaniProekt;
 
+import com.example.stefaniProekt.service.getData.GetDataService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,8 +16,11 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @EnableAsync
 public class StefaniProektApplication implements CommandLineRunner {
 
+	@Autowired
+	private GetDataService getDataService;
+
 	public static void main(String[] args) {
-		SpringApplication.run(StefaniProektApplication.class, args).close();
+		SpringApplication.run(StefaniProektApplication.class, args);
 	}
 
 	@Bean (name = "taskExecutor")
@@ -32,6 +37,6 @@ public class StefaniProektApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		long start = System.currentTimeMillis();
-
+		getDataService.findImageUrl();
 	}
 }
