@@ -1,6 +1,5 @@
 package com.example.stefaniProekt.repository.impl;
 
-import com.example.stefaniProekt.model.Product;
 import com.example.stefaniProekt.model.Stock;
 import com.example.stefaniProekt.repository.StockRepository;
 import com.example.stefaniProekt.repository.jpa.JpaStockRepository;
