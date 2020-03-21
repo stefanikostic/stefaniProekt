@@ -13,4 +13,6 @@ public interface StockService {
     Stock findByStockId(int stockId);
     List<Stock> getAllStocksByStore(int storeId);
     List<Stock> getAllStocksByProduct(String productCode);
+    List<Stock> searchStocks(String term);
+    List<Stock> searchStocksByStore(String store);
 }

@@ -34,7 +34,14 @@ public class StockApi {
     }
 
     @GetMapping(params = "store")
-    public List<Stock> getAllStocksByStore(@RequestParam int store){
-        return this.stockService.getAllStocksByStore(store);
+    public List<Stock> getStocksByStore(@RequestParam String store){
+        return this.stockService.searchStocksByStore(store);
     }
+
+    @GetMapping(params = "term")
+    public List<Stock> searchStocks(@RequestParam String term) {
+        return this.stockService.searchStocks(term);
+    }
+
+
 }

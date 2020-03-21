@@ -58,4 +58,14 @@ public class StockServiceImpl implements StockService {
     public List<Stock> getAllStocksByProduct(String productCode) {
         return this.stockRepository.getAllStocksByProduct(productCode);
     }
+
+    @Override
+    public List<Stock> searchStocks(String term) {
+        return this.stockRepository.searchStocks(term);
+    }
+
+    @Override
+    public List<Stock> searchStocksByStore(String store) {
+        return this.stockRepository.searchStocksByStore(store);
+    }
 }

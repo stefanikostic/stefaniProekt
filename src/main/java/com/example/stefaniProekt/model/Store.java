@@ -23,7 +23,7 @@ public class Store {
     private String address;
     private String logoMarket;
  /*   @ManyToMany(fetch = FetchType.EAGER)
-  *//*  @JoinTable(name="stock", joinColumns = { @JoinColumn(name="store_id", referencedColumnName = "id")},
+    @JoinTable(name="stock", joinColumns = { @JoinColumn(name="store_id", referencedColumnName = "id")},
     inverseJoinColumns = { @JoinColumn(name="product_code", referencedColumnName = "code")})*//*
     private List<Product> products;*/
    /* @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)

@@ -60,4 +60,15 @@ public class StockRepositoryImpl implements StockRepository {
         List<Stock> stocksStore = this.getAllStocksByStore(storeId);
         return stoc
     }*/
+
+    @Override
+    public List<Stock> searchStocks(String term) {
+        return this.repository.searchStocks(term);
+    }
+
+    @Override
+    public List<Stock> searchStocksByStore(String store) {
+        return this.repository.searchStocksByStore(store);
+    }
+
 }

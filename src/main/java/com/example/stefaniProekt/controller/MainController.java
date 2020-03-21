@@ -7,7 +7,7 @@ import com.example.stefaniProekt.model.Store;
 import com.example.stefaniProekt.repository.jpa.CategoryRepository;
 import com.example.stefaniProekt.repository.jpa.JpaProductRepository;
 import com.example.stefaniProekt.repository.jpa.JpaStockRepository;
-import com.example.stefaniProekt.repository.jpa.StoreRepository;
+import com.example.stefaniProekt.repository.jpa.JpaStoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ public class MainController {
     private JpaProductRepository productRepository;
 
     @Autowired
-    private StoreRepository storeRepository;
+    private JpaStoreRepository storeRepository;
 
     @Autowired
     private JpaStockRepository stockRepository;

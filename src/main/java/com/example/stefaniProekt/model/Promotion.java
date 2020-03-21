@@ -18,6 +18,9 @@ public class Promotion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int promotionId;
     private String promotionUrl;
+    @ManyToOne(targetEntity = Store.class)
+    @JoinColumn(name="store_id")
+    private Store store;
     public static synchronized Promotion createPromotion (String promotionUrl) {
         Promotion promotion = new Promotion();
         promotion.setPromotionId(promotionCounter);

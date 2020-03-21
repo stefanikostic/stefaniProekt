@@ -2,7 +2,7 @@ package com.example.stefaniProekt.service.impl;
 
 import com.example.stefaniProekt.model.Store;
 import com.example.stefaniProekt.model.exceptions.InvalidStoreException;
-import com.example.stefaniProekt.repository.jpa.StoreRepository;
+import com.example.stefaniProekt.repository.jpa.JpaStoreRepository;
 import com.example.stefaniProekt.service.StoreService;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +10,9 @@ import java.util.List;
 
 @Service
 public class StoreServiceImpl implements StoreService {
-    private final StoreRepository storeRepository;
+    private final JpaStoreRepository storeRepository;
 
-    public StoreServiceImpl(StoreRepository storeRepository) {
+    public StoreServiceImpl(JpaStoreRepository storeRepository) {
         this.storeRepository = storeRepository;
     }
 

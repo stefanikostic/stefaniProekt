@@ -13,4 +13,6 @@ public interface StockRepository {
     List<Stock> getAllStocksByStore(int storeId);
     List<Stock> getAllStocksByProduct(String productCode);
 //    List<Product> getAllProductsByStore(int storeId);
+    List<Stock> searchStocks(String term);
+    List<Stock> searchStocksByStore(String store);
 }
